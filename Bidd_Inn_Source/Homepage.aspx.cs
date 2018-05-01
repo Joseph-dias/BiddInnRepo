@@ -4,16 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.IO;
 using System.Text;
 using System.Timers;
+using System.IO;
 
 public partial class _Default : Page
 {
-    private System.Timers.Timer timer;
     private retriever myR;
-    public string hotelNum { get; set; }
-    public string custNum { get; set; }
     protected void Page_Load(object sender, EventArgs e)
     {
         //customer cust = new customer("Stash", "password");
@@ -27,24 +24,17 @@ public partial class _Default : Page
         if (Session["User"] is hotel) Response.Redirect("~//HotPGE.aspx");
         else if (Session["User"] is customer) Response.Redirect("~//authenticateEmail.aspx");
         setNumVars();
-        cNum.Text = custNum;
-        hNum.Text = hotelNum;
-        timer = new System.Timers.Timer(10000);
-        timer.Elapsed += timer_tick;
-        timer.Start();
-    }
-
-    private void timer_tick(object sender, EventArgs e)
-    {
-        setNumVars();
+        cNum.Text = custFLD.Value;
+        hNum.Text = hotFLD.Value;
     }
 
     private void setNumVars()
     {
         myR = new hotelRetriever();
-        hotelNum = myR.retrieve().Count.ToString();
+        hotFLD.Value = myR.retrieve().Count.ToString();
         myR = new customerRetriever();
-        custNum = myR.retrieve().Count.ToString();
+        custFLD.Value = myR.retrieve().Count.ToString();
+        UpdatePanel1.Update();
     }
 
     private string mapURL(string path) {
@@ -83,5 +73,10 @@ public partial class _Default : Page
         catch (Exception l) {
             //TODO: Add Error Text
         }
+    }
+
+    protected void Timer1_Tick(object sender, EventArgs e)
+    {
+        setNumVars();
     }
 }

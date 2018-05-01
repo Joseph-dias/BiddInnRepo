@@ -41,6 +41,15 @@ Simply sign up and start adding your rooms to the list.</asp:TextBox>
         <br />
         <br />
         <br />
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <asp:Timer ID="Timer1" runat="server" Interval="5000" Enabled="true" OnTick="Timer1_Tick"></asp:Timer>
+                <asp:HiddenField ID="custFLD" ClientIDMode="Static" runat="server" Value="0" />
+                <asp:HiddenField ID="hotFLD" ClientIDMode="Static" runat="server" Value="0" />
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <br />
+        <br />
         <br />
         <br />
         <br />
