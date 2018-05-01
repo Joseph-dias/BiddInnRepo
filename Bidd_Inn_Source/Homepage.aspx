@@ -22,7 +22,7 @@
         <br />
         <br />
         <br />
-        <asp:TextBox ID="descTXT" runat="server" BackColor="#3399FF" style="overflow:hidden;resize:none" Enabled="False" Height="273px" TextMode="MultiLine" Width="1415px" Font-Size="Medium" ForeColor="#FFFF66">This is your one-stop for all of your hotel needs.
+        <asp:TextBox ID="descTXT" runat="server" BackColor="#0099CC" Enabled="False" Height="273px" TextMode="MultiLine" style="width:1500px;overflow:hidden;resize:none" Font-Size="Medium" ForeColor="#FFFF66">This is your one-stop for all of your hotel needs.
 
 For Customers:
 Simply sign up, go to rooms, click on your desired room&#39;s name, scroll down, and make an offer.
@@ -32,11 +32,11 @@ Simply sign up and start adding your rooms to the list.</asp:TextBox>
         <br />
         <br />
         <br />
-        <asp:Label ID="custNumber" runat="server" BackColor="#3399FF" Font-Size="Medium" ForeColor="#FFFF66" Text="Number of Customers: "></asp:Label>
-        <asp:Label ID="cNum" runat="server" ClientIDMode="Static" BackColor="#3399FF" Font-Size="Medium" ForeColor="#FFFF66" Text="####"></asp:Label>
+        <asp:Label ID="custNumber" runat="server" BackColor="#0099CC" Font-Size="Medium" ForeColor="#FFFF66" Text="Number of Customers: " BorderColor="Yellow"></asp:Label>
+        <asp:Label ID="cNum" runat="server" ClientIDMode="Static" BackColor="#0099CC" Font-Size="Medium" ForeColor="#FFFF66" Text="####"></asp:Label>
         &nbsp;
-        <asp:Label ID="hotNumber" runat="server" BackColor="#3399FF" Font-Size="Medium" ForeColor="#FFFF66" Text="Number of Hotels: "></asp:Label>
-        <asp:Label ID="hNum" runat="server" ClientIDMode="Static" BackColor="#3399FF" Font-Size="Medium" ForeColor="#FFFF66" Text="####"></asp:Label>
+        <asp:Label ID="hotNumber" runat="server" BackColor="#0099CC" Font-Size="Medium" ForeColor="#FFFF66" Text="Number of Hotels: "></asp:Label>
+        <asp:Label ID="hNum" runat="server" ClientIDMode="Static" BackColor="#0099CC" Font-Size="Medium" ForeColor="#FFFF66" Text="####"></asp:Label>
         <br />
         <br />
         <br />
