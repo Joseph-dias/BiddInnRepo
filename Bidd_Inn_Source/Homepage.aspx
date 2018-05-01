@@ -22,7 +22,7 @@
         <br />
         <br />
         <br />
-        <asp:TextBox ID="descTXT" runat="server" BackColor="#3399FF" style="overflow:hidden;resize:none" Enabled="False" Height="191px" TextMode="MultiLine" Width="1415px" Font-Size="Medium" ForeColor="#FFFF66">This is your one-stop for all of your hotel needs.
+        <asp:TextBox ID="descTXT" runat="server" BackColor="#3399FF" style="overflow:hidden;resize:none" Enabled="False" Height="273px" TextMode="MultiLine" Width="1415px" Font-Size="Medium" ForeColor="#FFFF66">This is your one-stop for all of your hotel needs.
 
 For Customers:
 Simply sign up, go to rooms, click on your desired room&#39;s name, scroll down, and make an offer.
