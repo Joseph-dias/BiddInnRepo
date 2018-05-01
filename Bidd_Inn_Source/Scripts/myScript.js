@@ -1,8 +1,8 @@
-﻿window.setInterval(changeNums, 1000);
-var custs = "<%=customerNumber%>";
-var hots = "<%=hotelNumber%>";
+﻿window.setInterval(changeNums, 5000);
 
 function changeNums() {
-    document.getElementById("#cNum").innerText = custs;
-    document.getElementById("#hNum").innerText = hots;
+    var custs = "<%= custNum %>";
+    var hots = "<%= hotelNum %>";
+    document.getElementById("cNum").innerText = custs;
+    document.getElementById("hNum").innerText = hots;
 }

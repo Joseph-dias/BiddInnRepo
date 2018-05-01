@@ -12,8 +12,8 @@ public partial class _Default : Page
 {
     private System.Timers.Timer timer;
     private retriever myR;
-    public int customerNumber;
-    public int hotelNumber;
+    public string hotelNum { get; set; }
+    public string custNum { get; set; }
     protected void Page_Load(object sender, EventArgs e)
     {
         //customer cust = new customer("Stash", "password");
@@ -27,9 +27,9 @@ public partial class _Default : Page
         if (Session["User"] is hotel) Response.Redirect("~//HotPGE.aspx");
         else if (Session["User"] is customer) Response.Redirect("~//authenticateEmail.aspx");
         setNumVars();
-        cNum.Text = customerNumber.ToString();
-        hNum.Text = hotelNumber.ToString();
-        timer = new System.Timers.Timer(1000);
+        cNum.Text = custNum;
+        hNum.Text = hotelNum;
+        timer = new System.Timers.Timer(10000);
         timer.Elapsed += timer_tick;
         timer.Start();
     }
@@ -42,9 +42,9 @@ public partial class _Default : Page
     private void setNumVars()
     {
         myR = new hotelRetriever();
-        hotelNumber = myR.retrieve().Count;
+        hotelNum = myR.retrieve().Count.ToString();
         myR = new customerRetriever();
-        customerNumber = myR.retrieve().Count;
+        custNum = myR.retrieve().Count.ToString();
     }
 
     private string mapURL(string path) {

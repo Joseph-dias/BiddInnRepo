@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Homepage.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <script src="Scripts/myScript.js"></script>
     <br />
     <asp:Panel ID="Panel1" runat="server" BackImageUrl="~/SiteImages/hotel pool.jpg" Height="100%" Width="100%" Font-Bold="True">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="custBTN" runat="server" BackColor="#FFCC00" BorderStyle="Groove" Font-Bold="True" Font-Size="Large" Height="57px" PostBackUrl="~/LoginFormCust.aspx" Text="Sign in as a Customer" Width="267px" />
@@ -34,10 +33,10 @@ Simply sign up and start adding your rooms to the list.</asp:TextBox>
         <br />
         <br />
         <asp:Label ID="custNumber" runat="server" BackColor="#3399FF" Font-Size="Medium" ForeColor="#FFFF66" Text="Number of Customers: "></asp:Label>
-        <asp:Label ID="cNum" runat="server" BackColor="#3399FF" Font-Size="Medium" ForeColor="#FFFF66" Text="####"></asp:Label>
+        <asp:Label ID="cNum" runat="server" ClientIDMode="Static" BackColor="#3399FF" Font-Size="Medium" ForeColor="#FFFF66" Text="####"></asp:Label>
         &nbsp;
         <asp:Label ID="hotNumber" runat="server" BackColor="#3399FF" Font-Size="Medium" ForeColor="#FFFF66" Text="Number of Hotels: "></asp:Label>
-        <asp:Label ID="hNum" runat="server" BackColor="#3399FF" Font-Size="Medium" ForeColor="#FFFF66" Text="####"></asp:Label>
+        <asp:Label ID="hNum" runat="server" ClientIDMode="Static" BackColor="#3399FF" Font-Size="Medium" ForeColor="#FFFF66" Text="####"></asp:Label>
         <br />
         <br />
         <br />
@@ -65,4 +64,5 @@ Simply sign up and start adding your rooms to the list.</asp:TextBox>
     <br />
     <br />
 &nbsp;
+    <script src="Scripts/myScript.js"></script>
 </asp:Content>
