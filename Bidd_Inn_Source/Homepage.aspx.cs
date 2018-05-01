@@ -6,9 +6,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Text;
+using System.Timers;
 
 public partial class _Default : Page
 {
+    private System.Timers.Timer timer;
+    private retriever myR;
+    public int customerNumber;
+    public int hotelNumber;
     protected void Page_Load(object sender, EventArgs e)
     {
         //customer cust = new customer("Stash", "password");
@@ -21,6 +26,25 @@ public partial class _Default : Page
         //Session["User"] = null;
         if (Session["User"] is hotel) Response.Redirect("~//HotPGE.aspx");
         else if (Session["User"] is customer) Response.Redirect("~//authenticateEmail.aspx");
+        setNumVars();
+        cNum.Text = customerNumber.ToString();
+        hNum.Text = hotelNumber.ToString();
+        timer = new System.Timers.Timer(1000);
+        timer.Elapsed += timer_tick;
+        timer.Start();
+    }
+
+    private void timer_tick(object sender, EventArgs e)
+    {
+        setNumVars();
+    }
+
+    private void setNumVars()
+    {
+        myR = new hotelRetriever();
+        hotelNumber = myR.retrieve().Count;
+        myR = new customerRetriever();
+        customerNumber = myR.retrieve().Count;
     }
 
     private string mapURL(string path) {

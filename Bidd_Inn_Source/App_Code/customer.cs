@@ -77,6 +77,7 @@ public class customer : siteUser
                 newCust.dbConnect.Close();
             }
             newCust.retrieve();
+            http://localhost:60921/Scripts/myScript.js
             return newCust;
         }
         else return null;

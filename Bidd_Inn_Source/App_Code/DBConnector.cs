@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 public abstract class DBConnector
 {
     protected static Object theLock = new Object();
-    protected const string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\stash\Documents\Bidd_Inn\App_Data\Database.mdf;Integrated Security = TrueData Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\stash\Documents\Bidd_Inn\App_Data\Database.mdf;Integrated Security = True";
+    protected const string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\stash\source\repos\BiddInn\Bidd_Inn_Source\App_Data\Database.mdf;Integrated Security=True";
     protected SqlConnection dbConnect;
     public DBConnector()
     {
