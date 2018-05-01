@@ -40,7 +40,7 @@ public class customer : siteUser
     public customer(string username, string password) { //Authenticate user
         if (authenticated(username, password))
         {
-            retrieve();
+            if (!retrieve()) throw new Exception("USER IS NOT A CUSTOMER");  //Failed to retrieve data from 'customer' table
         }
         else { throw new Exception("NO USER FOUND"); }
     }

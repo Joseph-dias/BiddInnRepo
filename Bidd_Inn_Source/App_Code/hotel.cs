@@ -39,7 +39,7 @@ public class hotel : siteUser
     { //Authenticate user
         if (authenticated(username, password))
         {
-            retrieve();
+            if (!retrieve()) throw new Exception("USER IS NOT A HOTEL!");
         }
         else { throw new Exception("NO USER FOUND"); }
     }
